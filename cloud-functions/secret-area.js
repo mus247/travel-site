@@ -1,8 +1,9 @@
 exports.handler = function(event,context,callback) {
 const secretContent = `
 <h3>Welcome To the Secret Area</h3>
-<p>Here we can tell you that the sky is blue</p>
-``
+<p>Here we can tell you that the sky is <strong>blue</strong>, and two plus two equals four.</p>
+`
+
 let body
 
 if (event.body) {
@@ -16,12 +17,11 @@ if (body.password == "javascipt") {
     statusCode: 200,
     body: secretContent
   })
-}else {
+} else {
   callback(null, {
     statusCode: 401
   })
 }
-
 
 
 }
