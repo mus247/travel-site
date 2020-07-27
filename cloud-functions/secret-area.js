@@ -12,7 +12,7 @@ if (event.body) {
   body = {}
 }
 
-if (body.password == "javascipt") {
+if (body.password == "javascript") {
   callback(null, {
     statusCode: 200,
     body: secretContent
